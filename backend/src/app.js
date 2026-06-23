@@ -48,6 +48,14 @@ app.get('/health', (req, res) => {
 });
 
 app.get('/metrics', async (req, res) => {
+  const auth = req.headers.authorization;
+  const expected = 'Basic ' + Buffer.from(`metrics:${process.env.METRICS_PASSWORD}`).toString('base64');
+
+  if (auth !== expected) {
+    res.set('WWW-Authenticate', 'Basic realm="metrics"');
+    return res.status(401).send('Authentication required');
+  }
+
   res.set('Content-Type', client.register.contentType);
   res.end(await client.register.metrics());
 });
