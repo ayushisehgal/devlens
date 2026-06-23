@@ -1,0 +1,99 @@
+.card {
+  background: #fff;
+  border: 0.5px solid #e4e3df;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.cardSubtitle {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin: 3px 0 0;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #6b6b6b;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  background: #1a9a78;
+  border-radius: 2px;
+}
+
+.tooltip {
+  background: #1a1f2e;
+  border: 1px solid #2a3042;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.tooltipLabel {
+  color: #8b949e;
+  margin-bottom: 4px;
+}
+
+.tooltipValue {
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tooltipDot {
+  width: 8px;
+  height: 8px;
+  background: #1a9a78;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.loadingState {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 8px;
+}
+
+.loadingBars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+}
+
+.loadingBar {
+  flex: 1;
+  background: #f0f0f0;
+  border-radius: 3px 3px 0 0;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}

@@ -1,0 +1,243 @@
+.card {
+  background: #fff;
+  border: 0.5px solid #e4e3df;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.cardSubtitle {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin: 3px 0 0;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #6b6b6b;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  background: #1a9a78;
+  border-radius: 2px;
+}
+
+.tooltip {
+  background: #1a1f2e;
+  border: 1px solid #2a3042;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.tooltipLabel {
+  color: #8b949e;
+  margin-bottom: 4px;
+}
+
+.tooltipValue {
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tooltipDot {
+  width: 8px;
+  height: 8px;
+  background: #1a9a78;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.loadingState {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  padding: 0 8px;
+}
+
+.loadingBars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+}
+
+.loadingBar {
+  flex: 1;
+  background: #f0f0f0;
+  border-radius: 3px 3px 0 0;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* MetricCard styles */
+.metricCard {
+  background: #fff;
+  border: 0.5px solid #e4e3df;
+  border-radius: 12px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.2s;
+}
+
+.metricCard:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.metricHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metricLabel {
+  font-size: 12.5px;
+  color: #6b6b6b;
+  font-weight: 500;
+}
+
+.metricIconWrap {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metricValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.metricDelta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.deltaChip {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 12px;
+}
+
+.deltaPos {
+  color: #0F6E56;
+  background: #e1f5ee;
+}
+
+.deltaNeg {
+  color: #b91c1c;
+  background: #fef2f2;
+}
+
+.deltaLabel {
+  font-size: 11.5px;
+  color: #8a8a8a;
+}
+
+/* RepoCard styles */
+.repoCard {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.repoCard:hover {
+  background: #e1f5ee;
+}
+
+.repoCard.selected {
+  background: #e1f5ee;
+  outline: 1.5px solid rgba(15,110,86,0.3);
+}
+
+.repoTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.langDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.repoName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.repoMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 18px;
+}
+
+.repoLang {
+  font-size: 11.5px;
+  color: #6b6b6b;
+}
+
+.repoStars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11.5px;
+  color: #8a8a8a;
+}
+
+.repoStars svg {
+  color: #e6a817;
+}
