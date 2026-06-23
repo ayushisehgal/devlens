@@ -413,30 +413,18 @@ export default function Dashboard() {
                 <h2 className={styles.pageTitle}>Monitoring</h2>
                 <p className={styles.pageSubtitle}>Live backend metrics via Prometheus + Grafana Cloud</p>
               </div>
-              <div
-                className={styles.repoPanel}
-                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, padding: '40px 20px', textAlign: 'center' }}
-              >
-                <p style={{ fontSize: 13, color: 'var(--color-text-secondary)', margin: 0 }}>
-                  Grafana dashboard not connected yet.
-                </p>
-                <p style={{ fontSize: 12, color: 'var(--color-text-tertiary)', margin: 0 }}>
-                  Once Grafana Cloud is set up, the live metrics panel will be embedded here.
-                </p>
-              </div>
-              {/*
-                Once you have a Grafana Cloud public snapshot URL, replace the block above with:
-
-                <iframe
-                  src="YOUR_GRAFANA_EMBED_URL_HERE"
-                  width="100%"
-                  height="500"
-                  frameBorder="0"
-                  style={{ borderRadius: 12, border: '1px solid var(--color-border-tertiary)' }}
-                />
-              */}
+              <iframe
+                src="https://valiantlifeboat294.grafana.net/public-dashboards/3622f63f5a6046a1a59d2518ebb1a8db"
+                width="100%"
+                height="600"
+                frameBorder="0"
+                style={{ borderRadius: 12, border: '1px solid var(--color-border-tertiary)' }}
+                title="DevLens live backend metrics"
+              />
             </>
           )}
+              
+              
 
           {/* SETTINGS VIEW */}
           {view === 'settings' && (
